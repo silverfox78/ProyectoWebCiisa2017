@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cabecera" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" Runat="Server">
-<h1>TIPO</h1>
+<h1>SUB TIPO</h1>
 
     <ul>
         <li>ID</li>
