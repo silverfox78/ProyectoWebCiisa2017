@@ -22,7 +22,7 @@
     <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="Scripts/patternfly.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="Scripts/dataTables.buttons.min.js"></script>
+    <%--<script type="text/javascript" src="Scripts/dataTables.buttons.min.js"></script>--%>
     <script type="text/javascript" src="Scripts/buttons.flash.min.js"></script>
     <script type="text/javascript" src="Scripts/jszip.min.js"></script>
     <script type="text/javascript" src="Scripts/pdfmake.min.js"></script>
@@ -34,7 +34,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-pf" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">

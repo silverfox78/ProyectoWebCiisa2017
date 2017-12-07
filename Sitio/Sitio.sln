@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sitio", "D:\Github\ProyectoWebCiisa2017\Sitio\", "{B625BDCB-9478-4D61-BB84-CDC84FCEDFA9}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{9584b48a-6b8a-4838-8ccc-893319634dba}|Negocio.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_57548"
 		Debug.AspNetCompiler.PhysicalPath = "..\Sitio\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57548\"
@@ -25,13 +26,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sitio", "D:\Github\Proyecto
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "..\Negocio\Negocio.csproj", "{9584B48A-6B8A-4838-8CCC-893319634DBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B625BDCB-9478-4D61-BB84-CDC84FCEDFA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B625BDCB-9478-4D61-BB84-CDC84FCEDFA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B625BDCB-9478-4D61-BB84-CDC84FCEDFA9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B625BDCB-9478-4D61-BB84-CDC84FCEDFA9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9584B48A-6B8A-4838-8CCC-893319634DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9584B48A-6B8A-4838-8CCC-893319634DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9584B48A-6B8A-4838-8CCC-893319634DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9584B48A-6B8A-4838-8CCC-893319634DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
