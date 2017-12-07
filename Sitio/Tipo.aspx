@@ -10,11 +10,12 @@
     <script src="../js/patternfly.min.js"></script>
 
     <h1 id="right-aligned_all-fields-required">Tipo</h1>
+     <br />
     <form class="form-horizontal" role="form">
         <div class="form-group">
             <label for="input1" class="col-sm-2 control-label">ID</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="input1" required>
+                <input type="text" class="form-control"  id="input1" required>
             </div>
             <br />
         </div>
@@ -68,7 +69,7 @@
         <br />
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default" disabled>Guardar</button>
+                <button type="submit" class="btn btn-default" Enable>Guardar</button>
             </div>
         </div>
     </form>
