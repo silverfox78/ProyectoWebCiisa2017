@@ -17,6 +17,7 @@
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="codigo" required="required" />
             </div>
+        </div>
        
 
         <div class="form-group">
