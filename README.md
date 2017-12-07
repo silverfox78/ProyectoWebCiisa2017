@@ -9,5 +9,4 @@
 * Carlos Hidalgo Vasquez
 * Samuel Barrera Bastidas
 
-hola soy pepito
-holis
+MIRAR: https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/

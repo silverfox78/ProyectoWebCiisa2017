@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" Runat="Server">
     <h1>Error</h1>
-
+    <h1>Samuel</h1>
     <ul>
         <li>ID</li>
         <li>ID_NIVEL</li>
