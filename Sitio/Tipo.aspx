@@ -2,9 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cabecera" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" runat="Server" class="form-horizontal">
-        <h1 id="right-aligned_all-fields-required">Tipo</h1>
+<asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" runat="Server">
     <div class="form-horizontal">
+        <h1 id="right-aligned_all-fields-required">Tipo</h1>
         <div class="form-group">
             <label for="id_tipo" class="col-sm-2 control-label">ID</label>
             <div class="col-sm-10">
