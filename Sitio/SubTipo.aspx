@@ -9,54 +9,54 @@
         <div class="form-group">
             <label for="id_subtipo" class="col-sm-2 control-label">ID</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="id_subtipo" required>
+                <input type="text" class="form-control" id="id_subtipo" required="required" />
             </div>
         </div>
         <div class="form-group">
             <label for="codigo_tipo" class="col-sm-2 control-label">ID Tipo</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="codigo_tipo" required>
+                <input type="text" class="form-control" id="codigo_tipo" required="required" />
             </div>
         </div>
 
         <div class="form-group">
             <label for="codigo_subtipo" class="col-sm-2 control-label">Código</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="codigo_subtipo" required>
+                <input type="text" class="form-control" id="codigo_subtipo" required="required" />
             </div>
         </div>
         <div class="form-group">
             <label for="nombre_subtipo" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nombre_subtipo" required>
+                <input type="text" class="form-control" id="nombre_subtipo" required="required" />
             </div>
         </div>
 
         <div class="form-group">
             <label for="descripcion_subtipo" class="col-sm-2 control-label">Descripción</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="descripcion_subtipo" required>
+                <input type="text" class="form-control" id="descripcion_subtipo" required="required" />
             </div>
         </div>
 
         <div class="form-group">
             <label for="input5" class="col-sm-2 control-label">Fecha de Creación</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" />
             </div>
         </div>
 
         <div class="form-group">
             <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" />
             </div>
         </div>
         <div class="form-group">
             <label for="Estado_subtipo" class="col-sm-2 control-label">Estado</label>
             <div class="col-sm-10">
                 <select name="EstadoSubTipo" id="EstadoSubTipo">
-                    <option value="Ninguno" selected>Seleccione Estado</option>
+                    <option value="Ninguno" selected="selected">Seleccione Estado</option>
                     <option value="estado1">Estado1</option>
                     <option value="estado2">Estado2</option>
                     <option value="estado3">Estado3</option>
