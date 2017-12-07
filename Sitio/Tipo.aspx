@@ -36,14 +36,14 @@
         <div class="form-group">
             <label for="input5" class="col-sm-2 control-label">Fecha de Creación</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" />
             </div>
         </div>
 
         <div class="form-group">
             <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" />
             </div>
         </div>
 
@@ -51,7 +51,7 @@
             <label for="Estado_tipo" class="col-sm-2 control-label">Estado</label>
             <div class="col-sm-10">
                 <select name="EstadoTipo" id="EstadoTipo">
-                    <option value="Ninguno" selected>Seleccione Estado</option>
+                    <option value="Ninguno" selected="selected">Seleccione Estado</option>
                     <option value="estado1">Estado1</option>
                     <option value="estado2">Estado2</option>
                     <option value="estado3">Estado3</option>
