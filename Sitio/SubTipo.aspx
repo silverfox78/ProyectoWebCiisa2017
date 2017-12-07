@@ -55,12 +55,12 @@
         <div class="form-group">
             <label for="Estado_subtipo" class="col-sm-2 control-label">Estado</label>
             <div class="col-sm-10">
-                <asp:DropDownList ID="Estado_subtipo" AutoPostBack="true" runat="server">
-                    <asp:ListItem Value="Ninguno" Text="Seleccione Estado" Selected="True"></asp:ListItem>
-                    <asp:ListItem Value="estado1" Text="Estado1"></asp:ListItem>
-                    <asp:ListItem Value="estado2" Text="Estado2"></asp:ListItem>
-                    <asp:ListItem Value="estado3" Text="Estado3"></asp:ListItem>
-                </asp:DropDownList>
+                <select name="EstadoSubTipo" id="EstadoSubTipo">
+                    <option value="Ninguno" selected>Seleccione Estado</option>
+                    <option value="estado1">Estado1</option>
+                    <option value="estado2">Estado2</option>
+                    <option value="estado3">Estado3</option>
+                </select>
             </div>
         </div>
 
