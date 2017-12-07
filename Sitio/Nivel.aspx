@@ -3,6 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cabecera" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" Runat="Server">
+    <div id="Panel_Grilla">
+
+    </div>
+
+    <div id="Panel_Formulario" style="display:none;">
+
+    </div>
+
 
     <h1>Nivel</h1>
        <h1>Samuel</h1>

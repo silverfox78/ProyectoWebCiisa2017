@@ -1,0 +1,96 @@
+﻿body
+{
+	font-size: 10px;
+	font-family: Verdana;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-image: url(../../images/fondo_claro.gif)
+}
+img
+{
+	border: 0;
+}
+select
+{
+	border-right: highlight 1px solid;
+	border-top: highlight 1px solid;
+	font-size: 10px;
+	border-left: highlight 1px solid;
+	border-bottom: highlight 1px solid;
+}
+.titulo_grilla
+{
+	font-weight: bold;
+	font-size: 14px;
+	color: Navy;
+	background-color: #f5f5f5;
+	border: solid 1px #898d8f;
+	border-bottom: none;
+}
+.titulo
+{
+	font-weight: bold;
+	font-size: 12px;
+}
+input.boton
+{
+	font-size: 10px;
+}
+input.texto
+{
+	border-right: highlight 1px solid;
+	border-top: highlight 1px solid;
+	font-size: 10px;
+	border-left: highlight 1px solid;
+	border-bottom: highlight 1px solid;
+}
+.label
+{
+	font-weight: bold;
+}
+a
+{
+	color: #4169e1;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #808080;
+	text-decoration: none;
+}
+.titulo_grupo
+{
+	color: #333333;
+	background: white url('/PortalSecurity/images/HeaderBg.gif') repeat-x;
+	line-height: 18px;
+	border-bottom: solid 1px #bbbbbb;
+	border-top: solid 1px white;
+}
+.titulo_formulario
+{
+	color: #333333;
+	font-weight: bold;
+	font-size: 14px;
+	background: url('/PortalSecurity/images/HeaderBg.gif') repeat-x;
+	line-height: 18px;
+	border-bottom: solid 1px #bbbbbb;
+	border-top: solid 1px white;
+}
+.error
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+.error_pagina
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #a0a0a0;
+	font-family: Tahoma;
+}
+.formulario
+{
+	background-color: #dcdcdc;
+	border: solid 1px #999999;
+}

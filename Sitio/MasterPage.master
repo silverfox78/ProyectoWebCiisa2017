@@ -1,33 +1,35 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="es" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html lang="es" class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html lang="es" class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="es">
-<!--<![endif]-->
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="content-type" content="text/html; utf-8" />
+    <meta name="language" content="Spanish" />
+    <meta name="content-language" content="es" />
+    <meta name="robots" content="all" />
+    <meta name="Keywords" content="ie, version, jquery" />
+    <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta http-equiv="content-type" content="text/html; utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="content-language" content="es">
-    <meta name="robots" content="all">
-    <meta name="Keywords" content="ie, version, jquery, ponyo" />
-    <meta http-equiv="X-UA-Compatible" content="IE=IE9">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/ponyo.ico">
-    <title>Samuel Barrera Bastidas</title>
+    <title>CIISA - Gestor de eventos</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css">
+    <link rel="stylesheet" href="/Content/css/patternfly.css" />
+    <link rel="stylesheet" href="/Content/css/patternfly.min.css" />
+    <link rel="stylesheet" href="/Content/css/patternfly-additions.min.css" />
+    <link rel="stylesheet" href="/Content/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="/Content/DataTables/css/buttons.dataTables.min.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/patternfly.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="Scripts/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="Scripts/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="Scripts/jszip.min.js"></script>
+    <script type="text/javascript" src="Scripts/pdfmake.min.js"></script>
+    <script type="text/javascript" src="Scripts/vfs_fonts.js"></script>
+    <script type="text/javascript" src="Scripts/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="Scripts/buttons.print.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/js/patternfly.min.js"></script>
     <asp:ContentPlaceHolder id="cabecera" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -36,7 +38,7 @@
     <nav class="navbar navbar-default navbar-pf" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-                <span class="sr-only">Paginas de interes</span>
+                <span class="sr-only">CIISA - Gestor de eventos</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -44,102 +46,51 @@
             </button>
             <a class="navbar-brand" href="#">
                 <div class="row" style="min-width: 500px;">
-                    <div class="col-md-2 col-lg-2 col-xl-2 visible-md visible-lg">
-                        <img src="img/sbarrera.jpg" style="height: 50px; width: 50px;" />
+                    <div class="col-md-3 col-lg-3 col-xl-3 visible-md visible-lg">
+                        <img src="images/logo.png" style="height: 60px; width: auto;" />
                     </div>
-                    <div class="col-md-10 col-lg-10 col-xl-10" style="min-width: 300px;">
-                        <h1>Samuel Barrera Bastidas</h1>
+                    <div class="col-md-9 col-lg-9 col-xl-9" style="min-width: 300px;">
+                        <h1>CIISA - Gestor de eventos</h1>
                     </div>
                 </div>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-utility">
-                <li>
-                    <a href="https://github.com/silverfox78/">
-                        <img src="img/github.svg" style="height: 50px; width: 50px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/samuelbarrera/">
-                        <img src="img/linkedin.svg" style="height: 50px; width: 50px;">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://twitter.com/sbarrera">
-                        <img src="img/twitter.svg" style="height: 50px; width: 50px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/samuel.bastidas">
-                        <img src="img/facebook.svg" style="height: 50px; width: 50px;">
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-primary">
+           <ul class="nav navbar-nav navbar-primary">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            GitHub
+                            Paginas
                             <b class="caret"></b>
                         </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="https://github.com/silverfox78/">== Principal ==</a>
+                            <a href="Default.aspx">== Principal ==</a>
                         </li>
                         <li>
-                            <a href="https://github.com/silverfox78/SendaTI/blob/master/Fase%20-%200/readme.md">La Senda TI</a>
-                        </li>
-
-                        <li>
-                            <a href="https://github.com/silverfox78/ProjectEuler">Proyecto Euler</a>
+                            <a href="Usuario.aspx">Mantenedor de usuarios</a>
                         </li>
 
                         <li>
-                            <a href="https://github.com/silverfox78/ValidaVersionIE">Valida version navegador</a>
+                            <a href="Tipo.aspx">Mantenedor de tipos de log</a>
                         </li>
 
                         <li>
-                            <a href="https://github.com/silverfox78/MenuJqueryJson">Carga menu desde Json</a>
+                            <a href="SubTipo.aspx">Mantenedor de sub-tipos de log</a>
+                        </li>
+
+                        <li>
+                            <a href="Funcionalidad.aspx">Mantenedor de funcionalidades asociadas</a>
+                        </li>
+
+                        <li>
+                            <a href="Nivel.aspx">Mantenedor de Niveles</a>
+                        </li>
+
+                        <li>
+                            <a href="Error.aspx">Mantenedor de errores</a>
                         </li>
                     </ul>
                 </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            Proyecto Euler
-                            <b class="caret"></b>
-                        </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <img src="https://projecteuler.net/profile/sbarrera.png">
-                        </li>
-                        <li>
-                            <a href="https://projecteuler.net/progress=sbarrera">Proyecto Euler - Pagina oficial</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/silverfox78/ProjectEuler">Proyecto Euler - Repositorio GIT</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            Blog's'
-                            <b class="caret"></b>
-                        </a>
-                    <ul class="dropdown-menu">
-                        <li class="text-center">
-                            <img src="img/dinobase.png">
-                        </li>
-                        <li>
-                            <a href="http://dinosauriomoderno.blogspot.com">El Dinosaurio Moderno</a>
-                        </li>
-                    </ul>
-                </li>
-
-
             </ul>
         </div>
     </nav>
