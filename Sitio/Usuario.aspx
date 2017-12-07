@@ -25,6 +25,22 @@
                     <tbody></tbody>
                 </table>
             </div>
+            <div class="panel-footer">
+                <!--
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-warning" id="BtnCargaEjemplo">
+                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Carga Ejemplo &nbsp; &nbsp;
+                    </button>
+                </div>
+                -->
+
+                <div class="btn-group pull-right" role="group">
+                    <button type="button" class="btn btn-success" id="BtnNuevo">
+                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nuevo Usuario &nbsp; &nbsp;
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -171,6 +187,11 @@
 
         $(document).ready(function () {
             LlamarServicioGrilla();
+
+            $("#BtnNuevo").click(function () {
+                $("#Panel_Formulario").show();
+                $("#Panel_Grilla").hide();
+            });
         });
     </script>
 </asp:Content>
