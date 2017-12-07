@@ -13,52 +13,51 @@
      <br />
     <form class="form-horizontal" role="form">
         <div class="form-group">
-            <label for="input1" class="col-sm-2 control-label">ID</label>
+            <label for="id_tipo" class="col-sm-2 control-label">ID</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control"  id="input1" required>
-            </div>
-            <br />
-        </div>
-        <div class="form-group">
-            <label for="input2" class="col-sm-2 control-label">Código</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="input2" required>
+                <input type="text" class="form-control"  id="id_tipo" required>
             </div>
         </div>
-        <br />
-        <br />
+      <br />
         <div class="form-group">
-            <label for="input3" class="col-sm-2 control-label">Nombre</label>
+            <label for="codigo_tipo" class="col-sm-2 control-label">Código</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="input3" required>
+                <input type="text" class="form-control" id="codigo_tipo" required>
             </div>
         </div>
         <br />
         <div class="form-group">
-            <label for="input4" class="col-sm-2 control-label">Descripción</label>
+            <label for="nombre_tipo" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="input4" required>
+                <input type="text" class="form-control" id="nombre_tipo" required>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="descripcion_tipo" class="col-sm-2 control-label">Descripción</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="descripcion_tipo" required>
             </div>
         </div>
         <br />
         <div class="form-group">
             <label for="input5" class="col-sm-2 control-label">Fecha de Creación</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" placeholder="Ingresar Fecha">
+                <input type="date" class="form-control">
             </div>
         </div>
         <br />
         <div class="form-group">
             <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" placeholder="Ingresar Fecha" id="input6">
+                <input type="date" class="form-control">
             </div>
         </div>
         <br />
         <div class="form-group">
-            <label for="Estado" class="col-sm-2 control-label">Estado</label>
+            <label for="Estado_tipo" class="col-sm-2 control-label">Estado</label>
             <div class="col-sm-10">
-                <asp:DropDownList ID="Estado" AutoPostBack="true" runat="server">
+                <asp:DropDownList ID="Estado_tipo" AutoPostBack="true" runat="server">
                     <asp:ListItem Value="Ninguno" Text="Seleccione Estado" Selected="True"></asp:ListItem>
                     <asp:ListItem Value="estado1" Text="Estado1"></asp:ListItem>
                     <asp:ListItem Value="estado2" Text="Estado2"></asp:ListItem>
@@ -69,7 +68,7 @@
         <br />
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default" Enable>Guardar</button>
+                <button type="submit" class="btn btn-default">Guardar</button>
             </div>
         </div>
     </form>
