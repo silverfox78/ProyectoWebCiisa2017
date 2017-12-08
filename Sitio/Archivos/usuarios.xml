@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="utf-16"?><ArrayOfUsuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<?xml version="1.0" encoding="utf-16"?><ArrayOfUsuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Usuario><Apellido>Barrera</Apellido><Correo>Ponyo@Ponyo.cl</Correo><FechaNac>2007-12-08T17:32:25.8855724-03:00</FechaNac><Id>1</Id><Nombre>Pony0</Nombre><Sexo>Masculino</Sexo><Username>Ponyo</Username></Usuario></ArrayOfUsuario>

@@ -185,9 +185,24 @@
             CargaGrillaGenerica(id, data, orden, columnas);
         }
 
+        function BuscaUsuario() {
+            var url = "Usuario.aspx\\Buscar";
+            var parametros = "{ id: 1 }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    window.console && console.log(obj);
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
         $(document).ready(function () {
             LlamarServicioGrilla();
-
+            BuscaUsuario();
             $("#BtnNuevo").click(function () {
                 $("#Panel_Formulario").show();
                 $("#Panel_Grilla").hide();
