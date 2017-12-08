@@ -5,3 +5,9 @@ D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\de-DE\Faker.NET4.resources.dll
 D:\Github\ProyectoWebCiisa2017\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\Github\ProyectoWebCiisa2017\Negocio\obj\Debug\Negocio.dll
 D:\Github\ProyectoWebCiisa2017\Negocio\obj\Debug\Negocio.pdb
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Base.dll
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Transferencia.dll
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Util.dll
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Base.pdb
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Transferencia.pdb
+D:\Github\ProyectoWebCiisa2017\Negocio\bin\Debug\Util.pdb

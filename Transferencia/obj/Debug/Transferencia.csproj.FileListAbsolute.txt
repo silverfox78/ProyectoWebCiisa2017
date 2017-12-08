@@ -1,0 +1,5 @@
+D:\Github\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.dll
+D:\Github\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.pdb
+D:\Github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
+D:\Github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.dll
+D:\Github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.pdb

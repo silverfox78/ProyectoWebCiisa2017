@@ -1,13 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Negocio.Negocio
+﻿namespace Negocio
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Usuario
     {
+        private Base.Usuario baseUsuario;
+
+        public Usuario(string rutaArchivo)
+        {
+            this.baseUsuario = new Base.Usuario(rutaArchivo);
+        }
+
+        public Transferencia.Usuario Buscar(long id)
+        {
+            return this.baseUsuario.Buscar(id);
+        }
+
+        public void Eliminar(long id)
+        {
+            this.baseUsuario.Eliminar(id);
+        }
+
         public List<Transferencia.Usuario> GeneraGrilla()
         {
             List<Transferencia.Usuario> retorno = new List<Transferencia.Usuario>();
@@ -36,6 +50,16 @@ namespace Negocio.Negocio
             }
 
             return retorno;
+        }
+
+        public void Guarda(Transferencia.Usuario usuario)
+        {
+            this.baseUsuario.Guardar(usuario);
+        }
+
+        public List<Transferencia.Usuario> Listar()
+        {
+            return this.baseUsuario.Listar();
         }
     }
 }

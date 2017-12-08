@@ -8,14 +8,10 @@ using System.Web.UI.WebControls;
 
 public partial class Usuario : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     [System.Web.Services.WebMethod]
     public static string ListaGrilla()
     {
-        return JsonConvert.SerializeObject(new Negocio.Negocio.Usuario().GeneraGrilla());
+        string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/usuarios.xml");
+        return JsonConvert.SerializeObject(new Negocio.Usuario(rutaArchivo).Listar());
     }
 }
