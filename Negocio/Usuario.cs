@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+﻿namespace Negocio
+{
+    using System;
+    using System.Collections.Generic;
+
+    public class Usuario
+    {
+        private Base.Usuario Accesobase;
+
+        public Usuario(string rutaArchivo)
+        {
+            this.Accesobase = new Base.Usuario(rutaArchivo);
+        }
+
+        public Transferencia.Usuario Buscar(long id)
+        {
+            return this.Accesobase.Buscar(id);
+        }
+
+        public void Eliminar(long id)
+        {
+            this.Accesobase.Eliminar(id);
+        }
+
+        public List<Transferencia.Usuario> GeneraGrilla()
+        {
+            List<Transferencia.Usuario> retorno = new List<Transferencia.Usuario>();
+
+            try
+            {
+                for (int i = 0; i < 25; i++)
+                {
+                    retorno.Add(
+                        new Transferencia.Usuario()
+                        {
+                            Id = Faker.RandomNumber.Next(1000000, 25000000),
+                            Nombre = Faker.Name.First(),
+                            Apellido = Faker.Name.Last(),
+                            Correo = Faker.Internet.Email(),
+                            FechaNac = DateTime.Now.AddDays(Faker.RandomNumber.Next(-365 * 20, 0)),
+                            Username = Faker.Internet.UserName(),
+                            Sexo = Faker.RandomNumber.Next(0, 1) == 0 ? "Masculino" : "Femenino"
+                        }
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al generar la grilla - Error: " + ex.Message, ex);
+            }
+
+            return retorno;
+        }
+
+        public void Guarda(Transferencia.Usuario usuario)
+        {
+            this.Accesobase.Guardar(usuario);
+        }
+
+        public List<Transferencia.Usuario> Listar()
+        {
+            return this.Accesobase.Listar();
+        }
+    }
+=======
 ﻿namespace Negocio
 {
     using System;
@@ -62,4 +128,5 @@
             return this.baseUsuario.Listar();
         }
     }
+>>>>>>> 7ff703eaee79a3cf232973bd5c76c79ee8739b2f
 }
