@@ -11,7 +11,6 @@ namespace Transferencia
         [XmlElement("Id", Type = typeof(long))]
         public long Id { set; get; }
 
-
         [XmlElement("IdNivel", Type = typeof(long))]
         public long IdNivel { set; get; }
 
