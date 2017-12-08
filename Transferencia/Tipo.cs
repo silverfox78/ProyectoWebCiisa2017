@@ -10,29 +10,30 @@ namespace Transferencia
 
     [Serializable]
     [XmlRoot("Tipo")]
-    class Tipo
+    public class Tipo
     {
-        [XmlElement("IdTipo", Type = typeof(long))]
-        public long IdTipo { set; get; }
+        [XmlElement("Id", Type = typeof(long))]
+        public long Id { set; get; }
 
-        [XmlElement("CodigoTipo", Type = typeof(string))]
+        [XmlElement("Codigo", Type = typeof(string))]
         public string CodigoTipo { set; get; }
 
-        [XmlElement("NombreTipo", Type = typeof(string))]
+        [XmlElement("Nombre", Type = typeof(string))]
         public string NombreTipo { set; get; }
 
-        [XmlElement("DescripcionTipo", Type = typeof(string))]
+        [XmlElement("Descripcion", Type = typeof(string))]
         public string DescripcionTipo { set; get; }
-
-
-        [XmlElement("FechCreacion", Type = typeof(string))]
+        
+        [XmlElement("FechaCreacion", Type = typeof(string))]
         public string FechCreacion { set; get; }
 
+        [XmlElement("FechaCreacion", Type = typeof(string))]
+        public string FechCareacion { set; get; }
 
+        [XmlElement("FechaActualizacion", Type = typeof(string))]
+        public string FechaActualizacion { set; get; }
 
-
-
-
-
+        [XmlElement("Estado", Type = typeof(string))]
+        public string Estado { set; get; }
     }
 }
