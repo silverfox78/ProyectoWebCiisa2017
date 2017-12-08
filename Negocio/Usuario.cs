@@ -5,21 +5,21 @@
 
     public class Usuario
     {
-        private Base.Usuario baseUsuario;
+        private Base.Usuario Accesobase;
 
         public Usuario(string rutaArchivo)
         {
-            this.baseUsuario = new Base.Usuario(rutaArchivo);
+            this.Accesobase = new Base.Usuario(rutaArchivo);
         }
 
         public Transferencia.Usuario Buscar(long id)
         {
-            return this.baseUsuario.Buscar(id);
+            return this.Accesobase.Buscar(id);
         }
 
         public void Eliminar(long id)
         {
-            this.baseUsuario.Eliminar(id);
+            this.Accesobase.Eliminar(id);
         }
 
         public List<Transferencia.Usuario> GeneraGrilla()
@@ -54,12 +54,12 @@
 
         public void Guarda(Transferencia.Usuario usuario)
         {
-            this.baseUsuario.Guardar(usuario);
+            this.Accesobase.Guardar(usuario);
         }
 
         public List<Transferencia.Usuario> Listar()
         {
-            return this.baseUsuario.Listar();
+            return this.Accesobase.Listar();
         }
     }
 }
