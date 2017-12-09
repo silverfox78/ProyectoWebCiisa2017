@@ -355,7 +355,7 @@
         $(document).ready(function () {
             LlamarServicioGrilla();
 
-            $("#BtnNuevo").click(function () {
+                $("#BtnNuevo").click(function () {
                 $("#txtId").val("0");
                 $("#txtCodigo").val("");
                 $("#txtNombre").val("");
