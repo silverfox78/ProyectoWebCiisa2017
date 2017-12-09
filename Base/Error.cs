@@ -1,6 +1,7 @@
 ﻿
 namespace Base
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
@@ -38,11 +39,15 @@ namespace Base
             if (!this.Existe(objeto))
             {
                 objeto.Id = this.DeterminaSiguiente();
+                objeto.FechaCreacion = DateTime.Now;
+                objeto.FechaActualizacion = default(DateTime);
                 this.lista.Add(objeto);
             }
             else
             {
                 int indice = this.lista.FindIndex(e => e.Id == objeto.Id);
+                objeto.FechaCreacion = this.lista.ElementAt(indice).FechaCreacion;
+                objeto.FechaActualizacion = DateTime.Now;
                 this.lista.RemoveAt(indice);
                 this.lista.Insert(indice, objeto);
             }

@@ -19,6 +19,7 @@ public partial class Nivel : System.Web.UI.Page
         public DateTime FechaCreacion { set; get; }
         public DateTime FechaActualizacion { set; get; }
     }
+
     [System.Web.Services.WebMethod]
     public static string ListaGrilla()
     {
@@ -40,6 +41,21 @@ public partial class Nivel : System.Web.UI.Page
             lista.Add(tmp);
         }
 
+        return JsonConvert.SerializeObject(lista);
+    }
+
+    [System.Web.Services.WebMethod]
+    public static string ListaNivelesPorFuncionalidad(long idFuncionalidad)
+    {
+        string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/niveles.xml");
+        List<Transferencia.Nivel> lista = new List<Transferencia.Nivel>();
+        foreach (Transferencia.Nivel nivel in new Negocio.Nivel(rutaArchivo).Listar())
+        {
+            if(nivel.IdFuncionalidad == idFuncionalidad)
+            {
+                lista.Add(nivel);
+            }
+        }
         return JsonConvert.SerializeObject(lista);
     }
 

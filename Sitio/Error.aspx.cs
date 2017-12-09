@@ -56,7 +56,7 @@ public partial class Error : System.Web.UI.Page
     }
 
     [System.Web.Services.WebMethod]
-    public static string Guardar(long id, long idNivel, string codigo, string nombre, string descripcion)
+    public static string Guardar(long id, long idNivel, long idFuncionalidad, string codigo, string nombre, string descripcion)
     {
         string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/errores.xml");
 
@@ -64,10 +64,12 @@ public partial class Error : System.Web.UI.Page
                 new Transferencia.Error()
                 {
                     Id = id,
+                    IdFuncionalidad = idFuncionalidad,
                     IdNivel = idNivel,
                     Nombre = nombre,
                     Codigo = codigo, 
-                    Descripcion = descripcion, FechaCreacion = DateTime.Now,
+                    Descripcion = descripcion,
+                    FechaCreacion = DateTime.Now,
                     FechaActualizacion = DateTime.Now                     
                 };
 

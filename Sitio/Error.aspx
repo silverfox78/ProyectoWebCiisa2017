@@ -277,12 +277,12 @@
             CargaGrillaGenerica(id, data, orden, columnas);
         }
 
-        function CargaFuncionalidades() {
+        function CargaFuncionalidades(idFuncionalidad) {
             $('#cmbFuncionalidad')
                 .find('option')
                 .remove()
                 .end()
-                .append('<option value="" selected="selected">Seleccione Funcionalidad</option>')
+                .append('<option value="">Seleccione Funcionalidad</option>')
                 .val('');
 
             var url = "Funcionalidad.aspx\\ListaGrilla";
@@ -297,7 +297,36 @@
                             text: funcionalidad.Nombre
                         }));
                     });
+                    $('#cmbFuncionalidad').val(idFuncionalidad);
 
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function CargaNiveles(idFuncionalidad, idNivel) {
+            $('#cmbNivel')
+                .find('option')
+                .remove()
+                .end()
+                .append('<option value="">Seleccione Nivel</option>')
+                .val('');
+
+            var url = "Nivel.aspx\\ListaNivelesPorFuncionalidad";
+            var parametros = "{ idFuncionalidad: " + idFuncionalidad + " }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    $.each(obj, function (i, nivel) {
+                        $('#cmbNivel').append($('<option>', {
+                            value: nivel.Id,
+                            text: nivel.Nombre
+                        }));
+                    });
+                    $('#cmbNivel').val(idNivel);
                     window.console && console.log("Termino con exito la llamada al WS...");
                 };
             var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
@@ -313,10 +342,21 @@
                 function (data) {
                     var obj = $.parseJSON(data.d);
                     $("#txtId").val(obj.Id);
-                    CargaFuncionalidades();                    
+                    CargaFuncionalidades(obj.IdFuncionalidad);
+                    $("#cmbFuncionalidad")
+                        .removeAttr('selected')
+                        .filter('[value=' + obj.IdFuncionalidad + ']')
+                        .attr('selected', true);
                     $("#cmbFuncionalidad").val(obj.IdFuncionalidad);
-                    CargaNiveles(obj.IdFuncionalidad);
+                    
+
+                    CargaNiveles(obj.IdFuncionalidad, obj.IdNivel);
+                    $("#cmbNivel")
+                        .removeAttr('selected')
+                        .filter('[value=' + obj.IdNivel + ']')
+                        .attr('selected', true);
                     $("#cmbNivel").val(obj.IdNivel);
+                    
 
                     $("#txtCodigo").val(obj.Codigo);
                     $("#txtNombre").val(obj.Nombre);
@@ -355,9 +395,7 @@
                 "idNivel: " + $("#cmbNivel").val() + ", " +
                 "codigo: '" + $("#txtCodigo").val() + "', " +
                 "nombre: '" + $("#txtNombre").val() + "', " +
-                "descripcion: '" + $("#txtDescripcion").val() + "', " +
-                "fechaCreacion: '" + $("#txtFechaCreacion").val() + "', " +
-                "fechaActualizacion: '" + $("#txtFechaActualizacion").val() + "' " +
+                "descripcion: '" + $("#txtDescripcion").val() + "' " +
                 "}";
             var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
             var callback =
@@ -397,8 +435,7 @@
         function Eliminar(id) {
             Mensajeria.ConfirmacionEliminacion("Eliminacion de Usuario", "Se eliminara al usuario id: " + id, "return FnEliminar(" + id + ")");
         }
-
-
+        
         $(document).ready(function () {
             LlamarServicioGrilla();
 
@@ -460,6 +497,10 @@
                 fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                 $("#txtFechaActualizacion").val(fecha);
             });
+
+            $('#cmbFuncionalidad').on('change', function () {
+                CargaNiveles($("#cmbFuncionalidad").val());
+            })
         });
     </script>
 </asp:Content>

@@ -271,6 +271,7 @@
                 function (data) {
                     var obj = $.parseJSON(data.d);
                     $("#txtId").val(obj.Id);
+                    CargaFuncionalidades(obj.IdFuncionalidad);
                     $("#cmbFuncionalidad").val(obj.IdFuncionalidad);
                     $("#txtCodigo").val(obj.Codigo);
                     $("#txtNombre").val(obj.Nombre);
@@ -350,7 +351,7 @@
             Mensajeria.ConfirmacionEliminacion("Eliminacion de Nivel", "Se eliminara el nivel id: " + id, "return FnEliminar(" + id + ")");
         }
 
-        function CargaFuncionalidades() {
+        function CargaFuncionalidades(idFuncionalidad) {
             $('#cmbFuncionalidad')
                 .find('option')
                 .remove()
@@ -370,7 +371,7 @@
                             text: funcionalidad.Nombre
                         }));
                     });
-
+                    $('#cmbFuncionalidad').val(idFuncionalidad);
                     window.console && console.log("Termino con exito la llamada al WS...");
                 };
             var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
@@ -383,7 +384,7 @@
 
             $("#BtnNuevo").click(function () {
                 $("#txtId").val("0");
-                CargaFuncionalidades();
+                CargaFuncionalidades("");
                 $("#cmbFuncionalidad").val("");
                 $("#txtCodigo").val("");
                 $("#txtNombre").val("");
