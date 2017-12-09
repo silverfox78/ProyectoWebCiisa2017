@@ -10,16 +10,17 @@
             </div>
 
             <div class="panel-body">
-                <table id="GrillaNivel" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
+                <table id="Grilla" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>ID Nivel</th>
+                            <th>Funcionalidad</th>
                             <th>Codigo</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
-                            <th>Fecha Creacion</th>
-                            <th>Fecha Actualizacion</th>
+                            <th>FechaCreacion</th>
+                            <th>FechaActualizacion</th>
+                            <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -43,7 +44,7 @@
     <div id="Panel_Formulario" style="display: none;">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Listado de niveles</h3>
+                <h3 class="panel-title">Edicion de nivel</h3>
             </div>
             <div class="panel-body">
                 <br />
@@ -51,26 +52,29 @@
                     <h1 id="right-aligned_all-fields-required">Nivel</h1>
                     <div class="form-group">
                         <label for="txtId" class="col-sm-2 control-label">ID</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="txtId" required="required" />
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="txtId" disabled="disabled" />
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="txtIdNivel" class="col-sm-2 control-label">ID Nivel</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="txtIdNivel" required="required" />
+                        <label for="cmbFuncionalidad" class="col-sm-2 control-label">Funcionalidad</label>
+                        <div class="col-sm-6">
+                            <select name="cmbFuncionalidad" id="cmbFuncionalidad" class="form-control">
+                                <option value="" selected="selected">Seleccione Funcionalidad</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="txtCodigo" class="col-sm-2 control-label">Código</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" id="txtCodigo" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtNombre" required="required" />
                         </div>
                     </div>
@@ -85,14 +89,14 @@
                     <div class="form-group">
                         <label for="txtCreacion" class="col-sm-2 control-label">Fecha de Creación</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" id="txtCreacion" />
+                            <input type="date" class="form-control" id="txtCreacion" disabled="disabled"/>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="txtActualizacion" class="col-sm-2 control-label">Fecha de Actualización</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" id="txtActualizacion" />
+                            <input type="date" class="form-control" id="txtActualizacion" disabled="disabled" />
                         </div>
                     </div>
                 </div>
@@ -212,7 +216,7 @@
 
         function CargarGrilla(data) {
             window.console && console.log("INICIO - CARGA GRILLA");
-            var id = "#GrillaNivel";
+            var id = "#Grilla";
             var orden = [[0, 'asc']];
             var columnas =
                 [
@@ -221,8 +225,8 @@
                         render: function (data, type, row) { return "<span class='label label-success'>" + row.Id + "</span>"; }
                     },
                     {
-                        "responsive": true, "orderable": true, "mDataProp": "IdNivel", "defaultContent": '',
-                        render: function (data, type, row) { return row.IdNivel; }
+                        "responsive": true, "orderable": true, "mDataProp": "Funcionalidad", "defaultContent": '',
+                        render: function (data, type, row) { return row.Funcionalidad; }
                     },
                     {
                         "responsive": true, "orderable": true, "mDataProp": "Codigo", "defaultContent": '',
@@ -237,12 +241,12 @@
                         render: function (data, type, row) { return row.Descripcion; }
                     },
                     {
-                        "responsive": true, "orderable": true, "mDataProp": "Creacion", "defaultContent": '',
-                        render: function (data, type, row) { return row.Creacion; }
+                        "responsive": true, "orderable": true, "mDataProp": "FechaCreacion", "defaultContent": '',
+                        render: function (data, type, row) { return row.FechaCreacion; }
                     },
                     {
-                        "responsive": true, "orderable": true, "mDataProp": "Actualizacion", "defaultContent": '',
-                        render: function (data, type, row) { return row.Actualizacion; }
+                        "responsive": true, "orderable": true, "mDataProp": "FechaActualizacion", "defaultContent": '',
+                        render: function (data, type, row) { return row.FechaActualizacion; }
                     },
                     {
                         "responsive": true, "orderable": true, "mDataProp": "Opciones", "defaultContent": '',
@@ -258,22 +262,7 @@
 
             CargaGrillaGenerica(id, data, orden, columnas);
         }
-
-        function BuscaNivel() {
-            var url = "Nivel.aspx\\Buscar";
-            var parametros = "{ id: 1 }";
-            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
-            var callback =
-                function (data) {
-                    var obj = $.parseJSON(data.d);
-                    window.console && console.log(obj);
-                    window.console && console.log("Termino con exito la llamada al WS...");
-                };
-            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
-
-            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
-        }
-
+        
         function Ver(id) {
             var url = "Nivel.aspx\\Buscar";
             var parametros = "{ id: " + id + " }";
@@ -282,21 +271,21 @@
                 function (data) {
                     var obj = $.parseJSON(data.d);
                     $("#txtId").val(obj.Id);
-                    $("#txtIdNivel").val(obj.Username);
+                    $("#cmbFuncionalidad").val(obj.IdFuncionalidad);
                     $("#txtCodigo").val(obj.Codigo);
-                    $("#txtNombre").val(obj.Apellido);
-                    $("#txtDescripcion").val(obj.Correo);
+                    $("#txtNombre").val(obj.Nombre);
+                    $("#txtDescripcion").val(obj.Descripcion);
 
-                    var now = new Date(obj.FechaNac);
+                    var now = new Date(obj.FechaCreacion);
                     var day = ("0" + now.getDate()).slice(-2);
                     var month = ("0" + (now.getMonth() + 1)).slice(-2);
                     var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                     $("#txtCreacion").val(fecha);
 
-                    var now = new Date(obj.FechaNac);
-                    var day = ("0" + now.getDate()).slice(-2);
-                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-                    var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                    now = new Date(obj.FechaActualizacion);
+                    day = ("0" + now.getDate()).slice(-2);
+                    month = ("0" + (now.getMonth() + 1)).slice(-2);
+                    fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                     $("#txtActualizacion").val(fecha);
 
 
@@ -317,22 +306,71 @@
             }
             var parametros = "{ " +
                 "id: " + id + ", " +
-                "idNivel: '" + $("#txtIdNivel").val() + "', " +
+                "idFuncionalidad: '" + $("#cmbFuncionalidad").val() + "', " +
                 "codigo: '" + $("#txtCodigo").val() + "', " +
                 "nombre: '" + $("#txtNombre").val() + "', " +
-                "descripcion: '" + $("#txtDescripcion").val() + "', " +
-                "creacion: '" + $("#txtCreacion").val() + "', " +
-                "actualizacion: '" + $("#txtActualizacion").val() + "' " +
+                "descripcion: '" + $("#txtDescripcion").val() + "' " +
                 "}";
             var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
             var callback =
                 function (data) {
                     var obj = $.parseJSON(data.d);
-                    table = $("#GrillaNivel").dataTable();
+                    table = $("#Grilla").dataTable();
                     oSettings = table.fnSettings();
                     table.fnClearTable(this);
                     table.fnDraw();
                     LlamarServicioGrilla();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function FnEliminar(id) {
+            var url = "Nivel.aspx\\Eliminar";
+            var parametros = "{ id: " + id + " }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    Mensajeria.CargardoFin();
+                    table = $("#Grilla").dataTable();
+                    oSettings = table.fnSettings();
+                    table.fnClearTable(this);
+                    table.fnDraw();
+                    LlamarServicioGrilla();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function Eliminar(id) {
+            Mensajeria.ConfirmacionEliminacion("Eliminacion de Nivel", "Se eliminara el nivel id: " + id, "return FnEliminar(" + id + ")");
+        }
+
+        function CargaFuncionalidades() {
+            $('#cmbFuncionalidad')
+                .find('option')
+                .remove()
+                .end()
+                .append('<option value="" selected="selected">Seleccione Funcionalidad</option>')
+                .val('');
+
+            var url = "Funcionalidad.aspx\\ListaGrilla";
+            var parametros = "{ }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    $.each(obj, function (i, funcionalidad) {
+                        $('#cmbFuncionalidad').append($('<option>', {
+                            value: funcionalidad.Id,
+                            text: funcionalidad.Nombre
+                        }));
+                    });
+
                     window.console && console.log("Termino con exito la llamada al WS...");
                 };
             var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
@@ -345,7 +383,8 @@
 
             $("#BtnNuevo").click(function () {
                 $("#txtId").val("0");
-                $("#txtIdNivel").val("");
+                CargaFuncionalidades();
+                $("#cmbFuncionalidad").val("");
                 $("#txtCodigo").val("");
                 $("#txtNombre").val("");
                 $("#txtDescripcion").val("");
@@ -360,10 +399,7 @@
                 var month = ("0" + (now.getMonth() + 1)).slice(-2);
                 var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                 $("#txtActualizacion").val(fecha);
-
-
-
-
+                
                 $("#Panel_Formulario").show();
                 $("#Panel_Grilla").hide();
             });
@@ -377,6 +413,30 @@
                 Guardar();
                 $("#Panel_Formulario").hide();
                 $("#Panel_Grilla").show();
+            });
+
+            $("#BtnEliminar").click(function () {
+                Eliminar($("#txtId").val());
+            });
+
+            $("#BtnLimpiar").click(function () {
+                $("#txtId").val("0");
+                CargaFuncionalidades();
+                $("#cmbFuncionalidad").val("");
+                $("#txtCodigo").val("");
+                $("#txtNombre").val("");
+                $("#txtDescripcion").val("");
+                var now = new Date();
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtCreacion").val(fecha);
+
+                var now = new Date();
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtActualizacion").val(fecha);
             });
         });
     </script>
