@@ -6,7 +6,7 @@
     <div id="Panel_Grilla">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Listado de niveles</h3>
+                <h3 class="panel-title">Listado de tipos</h3>
             </div>
 
             <div class="panel-body">
