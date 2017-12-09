@@ -2,16 +2,16 @@
 {
     using System.Collections.Generic;
 
-    public class Nivel
+    public class Tipo
     {
-        private Base.Nivel Accesobase;
+        private Base.Tipo Accesobase;
 
-        public Nivel(string rutaArchivo)
+        public Tipo(string rutaArchivo)
         {
-            this.Accesobase = new Base.Nivel(rutaArchivo);
+            this.Accesobase = new Base.Tipo(rutaArchivo);
         }
 
-        public Transferencia.Nivel Buscar(long id)
+        public Transferencia.Tipo Buscar(long id)
         {
             return this.Accesobase.Buscar(id);
         }
@@ -21,12 +21,12 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.Nivel usuario)
+        public void Guarda(Transferencia.Tipo usuario)
         {
             this.Accesobase.Guardar(usuario);
         }
 
-        public List<Transferencia.Nivel> Listar()
+        public List<Transferencia.Tipo> Listar()
         {
             return this.Accesobase.Listar();
         }
