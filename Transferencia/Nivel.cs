@@ -14,16 +14,16 @@
         public long IdFuncionalidad { set; get; }
 
         [XmlElement("Codigo", Type = typeof(string))]
-        public string CodigoTipo { set; get; }
+        public string Codigo { set; get; }
 
         [XmlElement("Nombre", Type = typeof(string))]
-        public string NombreTipo { set; get; }
+        public string Nombre { set; get; }
 
         [XmlElement("Descripcion", Type = typeof(string))]
-        public string DescripcionTipo { set; get; }
+        public string Descripcion { set; get; }
 
         [XmlElement("FechaCreacion", Type = typeof(DateTime))]
-        public DateTime FechCreacion { set; get; }
+        public DateTime FechaCreacion { set; get; }
 
         [XmlElement("FechaActualizacion", Type = typeof(DateTime))]
         public DateTime FechaActualizacion { set; get; }
