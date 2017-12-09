@@ -29,6 +29,7 @@
     <script type="text/javascript" src="Scripts/vfs_fonts.js"></script>
     <script type="text/javascript" src="Scripts/buttons.html5.min.js"></script>
     <script type="text/javascript" src="Scripts/buttons.print.min.js"></script>
+    <script type="text/javascript" src="Scripts/comun.js"></script>
 
     <asp:ContentPlaceHolder id="cabecera" runat="server">
     </asp:ContentPlaceHolder>

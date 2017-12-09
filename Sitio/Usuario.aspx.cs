@@ -55,4 +55,12 @@ public partial class Usuario : System.Web.UI.Page
         new Negocio.Usuario(rutaArchivo).Guarda(usuario);
         return JsonConvert.SerializeObject(true);
     }
+
+    [System.Web.Services.WebMethod]
+    public static string Eliminar(long id)
+    {
+        string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/usuarios.xml");
+        new Negocio.Usuario(rutaArchivo).Eliminar(id);
+        return JsonConvert.SerializeObject(true);
+    }
 }

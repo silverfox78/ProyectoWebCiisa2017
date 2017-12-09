@@ -339,6 +339,30 @@
             LlamarServicioGenerico(url, parametros, before, callback, fnerror);
         }
 
+        function FnEliminar(id) {
+            var url = "Usuario.aspx\\Eliminar";
+            var parametros = "{ id: " + id + " }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    Mensajeria.CargardoFin();
+                    table = $("#GrillaUsuarios").dataTable();
+                    oSettings = table.fnSettings();
+                    table.fnClearTable(this);
+                    table.fnDraw();
+                    LlamarServicioGrilla();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function Eliminar(id) {
+            Mensajeria.ConfirmacionEliminacion("Eliminacion de Usuario", "Se eliminara al usuario id: " + id, "return FnEliminar(" + id + ")");
+        }
+
+
         $(document).ready(function () {
             LlamarServicioGrilla();
 
@@ -368,6 +392,24 @@
                 Guardar();
                 $("#Panel_Formulario").hide();
                 $("#Panel_Grilla").show();
+            });
+
+            $("#BtnEliminar").click(function () {
+                Eliminar($("#txtId").val());
+            });
+
+            $("#BtnLimpiar").click(function () {
+                $("#txtId").val("0");
+                $("#txtUsername").val("");
+                $("#txtNombre").val("");
+                $("#txtApellidos").val("");
+                $("#txtCorreo").val("");
+                var now = new Date();
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtFecNac").val(fecha);
+                $("#cmbSexo").val("");
             });
         });
     </script>
