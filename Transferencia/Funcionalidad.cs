@@ -20,11 +20,11 @@ namespace Transferencia
         [XmlElement("Descripcion", Type = typeof(string))]
         public string DescripcionTipo { set; get; }
         
-        [XmlElement("FechaCreacion", Type = typeof(string))]
-        public string FechCreacion { set; get; }
+        [XmlElement("Creacion", Type = typeof(string))]
+        public string Creacion { set; get; }
 
-        [XmlElement("FechaActualizacion", Type = typeof(string))]
-        public string FechaActualizacion { set; get; }
+        [XmlElement("Actualizacion", Type = typeof(string))]
+        public string Actualizacion { set; get; }
 
         [XmlElement("Estado", Type = typeof(string))]
         public string Estado { set; get; }
