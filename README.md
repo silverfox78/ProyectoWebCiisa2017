@@ -11,8 +11,6 @@
 
 MIRAR: https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/
 
-
-
 Referencias Nuget usadas:
 * Install-Package Newtonsoft.Json -Version 6.0.1
 * Install-Package jQuery -Version 1.12.4
