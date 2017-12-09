@@ -21,9 +21,9 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.Nivel usuario)
+        public void Guarda(Transferencia.Nivel nivel)
         {
-            this.Accesobase.Guardar(usuario);
+            this.Accesobase.Guardar(nivel);
         }
 
         public List<Transferencia.Nivel> Listar()

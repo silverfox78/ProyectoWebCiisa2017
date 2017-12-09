@@ -84,4 +84,19 @@ public partial class Error : System.Web.UI.Page
         new Negocio.Error(rutaArchivo).Eliminar(id);
         return JsonConvert.SerializeObject(true);
     }
+
+    [System.Web.Services.WebMethod]
+    public static string ListaErroresPorNivel(long idNivel)
+    {
+        string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/errores.xml");
+        List<Transferencia.Error> lista = new List<Transferencia.Error>();
+        foreach (Transferencia.Error error in new Negocio.Error(rutaArchivo).Listar())
+        {
+            if (error.IdNivel == idNivel)
+            {
+                lista.Add(error);
+            }
+        }
+        return JsonConvert.SerializeObject(lista);
+    }
 }

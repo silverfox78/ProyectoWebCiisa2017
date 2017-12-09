@@ -43,6 +43,7 @@
     <Compile Include="ComunBase.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Funcionalidad.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Nivel.cs" />
     <Compile Include="SubTipo.cs" />
     <Compile Include="Tipo.cs" />

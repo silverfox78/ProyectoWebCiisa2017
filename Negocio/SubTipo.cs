@@ -21,9 +21,9 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.SubTipo usuario)
+        public void Guarda(Transferencia.SubTipo subtipo)
         {
-            this.Accesobase.Guardar(usuario);
+            this.Accesobase.Guardar(subtipo);
         }
 
         public List<Transferencia.SubTipo> Listar()

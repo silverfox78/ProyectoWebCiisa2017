@@ -82,4 +82,19 @@ public partial class SubTipo : System.Web.UI.Page
         new Negocio.SubTipo(rutaArchivo).Eliminar(id);
         return JsonConvert.SerializeObject(true);
     }
+
+    [System.Web.Services.WebMethod]
+    public static string ListaSubTiposPorTipo(long idTipo)
+    {
+        string rutaArchivo = HttpContext.Current.Server.MapPath("/Archivos/subtipos.xml");
+        List<Transferencia.SubTipo> lista = new List<Transferencia.SubTipo>();
+        foreach (Transferencia.SubTipo subtipo in new Negocio.SubTipo(rutaArchivo).Listar())
+        {
+            if (subtipo.IdTipo == idTipo) {
+                lista.Add(subtipo);
+            }
+        }
+
+        return JsonConvert.SerializeObject(lista);
+    }
 }

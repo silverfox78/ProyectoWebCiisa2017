@@ -1,12 +1,3 @@
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Base.dll
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Base.pdb
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Transferencia.dll
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Util.dll
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Transferencia.pdb
-D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Util.pdb
-D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
-D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.dll
-D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.pdb
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\bin\Debug\Base.dll
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\bin\Debug\Base.pdb
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\bin\Debug\Transferencia.dll
@@ -16,3 +7,12 @@ C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\bin\Debug\Util.pdb
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\obj\Debug\Base.dll
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Base\obj\Debug\Base.pdb
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Base.dll
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Base.pdb
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Transferencia.dll
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Util.dll
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Transferencia.pdb
+D:\Github\ProyectoWebCiisa2017\Base\bin\Debug\Util.pdb
+D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
+D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.dll
+D:\Github\ProyectoWebCiisa2017\Base\obj\Debug\Base.pdb

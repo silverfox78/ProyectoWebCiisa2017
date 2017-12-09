@@ -21,9 +21,9 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.Funcionalidad usuario)
+        public void Guarda(Transferencia.Funcionalidad funcionalidad)
         {
-            this.Accesobase.Guardar(usuario);
+            this.Accesobase.Guardar(funcionalidad);
         }
 
         public List<Transferencia.Funcionalidad> Listar()

@@ -21,9 +21,9 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.Error usuario)
+        public void Guarda(Transferencia.Error error)
         {
-            this.Accesobase.Guardar(usuario);
+            this.Accesobase.Guardar(error);
         }
 
         public List<Transferencia.Error> Listar()
