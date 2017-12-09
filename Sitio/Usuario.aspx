@@ -26,7 +26,8 @@
                 </table>
             </div>
             <div class="panel-footer">
-                <!--
+                <div>
+                    <!--
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-warning" id="BtnCargaEjemplo">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Carga Ejemplo &nbsp; &nbsp;
@@ -34,10 +35,11 @@
                 </div>
                 -->
 
-                <div class="btn-group pull-right" role="group">
-                    <button type="button" class="btn btn-success" id="BtnNuevo">
-                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nuevo Usuario &nbsp; &nbsp;
-                    </button>
+                    <div class="btn-group pull-right" role="group">
+                        <button type="button" class="btn btn-success" id="BtnNuevo">
+                            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nuevo Usuario &nbsp; &nbsp;
+                        </button>
+                    </div>
                 </div>
             </div>
 
