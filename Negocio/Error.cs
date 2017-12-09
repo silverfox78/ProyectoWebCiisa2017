@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Negocio
+﻿namespace Negocio
 {
+    using System.Collections.Generic;
+
     public class Error
     {
         private Base.Error Accesobase;
@@ -24,7 +20,7 @@ namespace Negocio
         {
             this.Accesobase.Eliminar(id);
         }
-        
+
         public void Guarda(Transferencia.Error usuario)
         {
             this.Accesobase.Guardar(usuario);
