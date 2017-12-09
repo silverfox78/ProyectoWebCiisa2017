@@ -12,3 +12,4 @@ C:\github\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.pdb
 C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
 C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.dll
 C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.pdb
+D:\Github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
