@@ -30,5 +30,17 @@
         {
             return this.Accesobase.Listar();
         }
+
+        public string DeterminaNombre(long id)
+        {
+            try
+            {
+                return this.Buscar(id).Nombre;
+            }
+            catch 
+            {
+                return "No Encontrado";
+            }
+        }
     }
 }

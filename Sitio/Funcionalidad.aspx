@@ -10,16 +10,17 @@
             </div>
 
             <div class="panel-body">
-                <table id="GrillaFuncionalidad" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
+                <table id="Grilla" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Codigo</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
-                            <th>Fecha Creacion</th>
-                            <th>Fecha Actualizacion</th>
                             <th>Estado</th>
+                            <th>FechaCreacion</th>
+                            <th>FechaActualizacion</th>
+                            <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -43,7 +44,7 @@
     <div id="Panel_Formulario" style="display: none;">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Listado de funcionalidades</h3>
+                <h3 class="panel-title">Edicion de funcionalidad</h3>
             </div>
             <div class="panel-body">
                 <br />
@@ -51,13 +52,13 @@
                     <h1 id="right-aligned_all-fields-required">Funcionalidad</h1>
                     <div class="form-group">
                         <label for="txtid" class="col-sm-2 control-label">ID</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="txtid" required="required" />
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="txtId" disabled="disabled" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="txtCodigo" class="col-sm-2 control-label">Código</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" id="txtCodigo" required="required" />
                         </div>
                     </div>
@@ -65,42 +66,39 @@
 
                     <div class="form-group">
                         <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" id="txtNombre" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="txtDescripcion" class="col-sm-2 control-label">Descripción</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtDescripcion" required="required" />
                         </div>
                     </div>
-
+                    
+                    <div class="form-group">
+                        <label for="cmbEstado" class="col-sm-2 control-label">Estado</label>
+                        <div class="col-sm-4">
+                            <select name="cmbEstado" id="cmbEstado" class="form-control">
+                                <option value="" selected="selected">Seleccione Estado</option>
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="txtCreacion" class="col-sm-2 control-label">Fecha de Creación</label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control" id="txtCreacion" />
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="txtCreacion" disabled="disabled"/>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="txtActualizacion" class="col-sm-2 control-label">Fecha de Actualización</label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control" id="txtActualizacion" />
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="cmbEstado" class="col-sm-2 control-label">Estado</label>
-                        <div class="col-sm-10">
-                            <select name="EstadoFuncionalidad" id="cmbEstado">
-                                <option value="Ninguno" selected="selected">Seleccione Estado</option>
-                                <option value="estado1">Estado1</option>
-                                <option value="estado2">Estado2</option>
-                                <option value="estado3">Estado3</option>
-                            </select>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="txtActualizacion" disabled="disabled"/>
                         </div>
                     </div>
                 </div>
@@ -220,7 +218,7 @@
 
         function CargarGrilla(data) {
             window.console && console.log("INICIO - CARGA GRILLA");
-            var id = "#GrillaFuncionalidad";
+            var id = "#Grilla";
             var orden = [[0, 'asc']];
             var columnas =
                 [
@@ -242,17 +240,25 @@
                         render: function (data, type, row) { return row.Descripcion; }
                     },
                     {
+                        "responsive": true, "orderable": true, "mDataProp": "Estado", "defaultContent": '',
+                        render: function (data, type, row)
+                        {
+                            if (row.Estado == "Activo") {
+                                return "<span class='label label-success'>" + row.Estado + "</span>";
+                            }
+                            else {
+                                return "<span class='label label-danger'>" + row.Estado + "</span>";
+                            }
+                        }
+                    },
+                    {
                         "responsive": true, "orderable": true, "mDataProp": "Creacion", "defaultContent": '',
-                        render: function (data, type, row) { return row.Creacion; }
+                        render: function (data, type, row) { return row.FechaCreacion; }
                     },
                     {
                         "responsive": true, "orderable": true, "mDataProp": "Actualizacion", "defaultContent": '',
-                        render: function (data, type, row) { return row.Actualizacion; }
+                        render: function (data, type, row) { return row.FechaActualizacion; }
                     },
-                     {
-                         "responsive": true, "orderable": true, "mDataProp": "Estado", "defaultContent": '',
-                         render: function (data, type, row) { return row.Estado; }
-                     },
                     {
                         "responsive": true, "orderable": true, "mDataProp": "Opciones", "defaultContent": '',
                         render: function (data, type, row) {
@@ -267,22 +273,7 @@
 
             CargaGrillaGenerica(id, data, orden, columnas);
         }
-
-        function BuscaNivel() {
-            var url = "Funcionalidad.aspx\\Buscar";
-            var parametros = "{ id: 1 }";
-            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
-            var callback =
-                function (data) {
-                    var obj = $.parseJSON(data.d);
-                    window.console && console.log(obj);
-                    window.console && console.log("Termino con exito la llamada al WS...");
-                };
-            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
-
-            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
-        }
-
+        
         function Ver(id) {
             var url = "Funcionalidad.aspx\\Buscar";
             var parametros = "{ id: " + id + " }";
@@ -292,19 +283,19 @@
                     var obj = $.parseJSON(data.d);
                     $("#txtId").val(obj.Id);
                     $("#txtCodigo").val(obj.Codigo);
-                    $("#txtNombre").val(obj.Apellido);
-                    $("#txtDescripcion").val(obj.Correo);
+                    $("#txtNombre").val(obj.Nombre);
+                    $("#txtDescripcion").val(obj.Descripcion);
 
-                    var now = new Date(obj.FechaNac);
+                    var now = new Date(obj.FechaCreacion);
                     var day = ("0" + now.getDate()).slice(-2);
                     var month = ("0" + (now.getMonth() + 1)).slice(-2);
                     var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                     $("#txtCreacion").val(fecha);
 
-                    var now = new Date(obj.FechaNac);
-                    var day = ("0" + now.getDate()).slice(-2);
-                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-                    var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                    now = new Date(obj.FechaActualizacion);
+                    day = ("0" + now.getDate()).slice(-2);
+                    month = ("0" + (now.getMonth() + 1)).slice(-2);
+                    fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                     $("#txtActualizacion").val(fecha);
 
                     $("#cmbEstado").val(obj.Estado);
@@ -330,15 +321,13 @@
                 "codigo: '" + $("#txtCodigo").val() + "', " +
                 "nombre: '" + $("#txtNombre").val() + "', " +
                 "descripcion: '" + $("#txtDescripcion").val() + "', " +
-                "creacion: '" + $("#txtCreacion").val() + "', " +
-                "actualizacion: '" + $("#txtActualizacion").val() + "' " +
-                "estado: '" + $("#cmbEstado").val() + "', " +
+                "estado: '" + $("#cmbEstado").val() + "' " +
                 "}";
             var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
             var callback =
                 function (data) {
                     var obj = $.parseJSON(data.d);
-                    table = $("#GrillaFuncionalidad").dataTable();
+                    table = $("#Grilla").dataTable();
                     oSettings = table.fnSettings();
                     table.fnClearTable(this);
                     table.fnDraw();
@@ -348,6 +337,29 @@
             var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
 
             LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function FnEliminar(id) {
+            var url = "Funcionalidad.aspx\\Eliminar";
+            var parametros = "{ id: " + id + " }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    Mensajeria.CargardoFin();
+                    table = $("#Grilla").dataTable();
+                    oSettings = table.fnSettings();
+                    table.fnClearTable(this);
+                    table.fnDraw();
+                    LlamarServicioGrilla();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function Eliminar(id) {
+            Mensajeria.ConfirmacionEliminacion("Eliminacion de Funcionalidad", "Se eliminara la funcionalidad id: " + id, "return FnEliminar(" + id + ")");
         }
 
         $(document).ready(function () {
@@ -364,13 +376,13 @@
                 var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                 $("#txtCreacion").val(fecha);
 
-                var now = new Date();
-                var day = ("0" + now.getDate()).slice(-2);
-                var month = ("0" + (now.getMonth() + 1)).slice(-2);
-                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                now = new Date();
+                day = ("0" + now.getDate()).slice(-2);
+                month = ("0" + (now.getMonth() + 1)).slice(-2);
+                fecha = now.getFullYear() + "-" + (month) + "-" + (day);
                 $("#txtActualizacion").val(fecha);
 
-                $("#cmbEstado").val(obj.Estado);
+                $("#cmbEstado").val("");
 
 
                 $("#Panel_Formulario").show();
@@ -386,6 +398,30 @@
                 Guardar();
                 $("#Panel_Formulario").hide();
                 $("#Panel_Grilla").show();
+            });
+
+            $("#BtnEliminar").click(function () {
+                Eliminar($("#txtId").val());
+            });
+
+            $("#BtnLimpiar").click(function () {
+                $("#txtId").val("0");
+                $("#txtCodigo").val("");
+                $("#txtNombre").val("");
+                $("#txtDescripcion").val("");
+                var now = new Date();
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtCreacion").val(fecha);
+
+                now = new Date();
+                day = ("0" + now.getDate()).slice(-2);
+                month = ("0" + (now.getMonth() + 1)).slice(-2);
+                fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtActualizacion").val(fecha);
+
+                $("#cmbEstado").val("");
             });
         });
     </script>

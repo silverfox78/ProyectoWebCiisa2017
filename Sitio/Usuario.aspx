@@ -10,7 +10,7 @@
             </div>
 
             <div class="panel-body">
-                <table id="GrillaUsuarios" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
+                <table id="Grilla" class="datatable table table-striped table-bordered" style="font-size: xx-small;">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -42,7 +42,7 @@
     <div id="Panel_Formulario" style="display: none;">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Listado de usuarios</h3>
+                <h3 class="panel-title">Edicion de usuarios</h3>
             </div>
             <div class="panel-body">
                 <br />
@@ -92,7 +92,7 @@
                     <div class="form-group">
                         <label for="cmbSexo" class="col-sm-2 control-label">Sexo</label>
                         <div class="col-sm-4">
-                            <select name="EstadoTipo" id="cmbSexo">
+                            <select name="EstadoTipo" id="cmbSexo" class="form-control">
                                 <option value="" selected="selected">Seleccione Sexo</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
@@ -217,7 +217,7 @@
 
         function CargarGrilla(data) {
             window.console && console.log("INICIO - CARGA GRILLA");
-            var id = "#GrillaUsuarios";
+            var id = "#Grilla";
             var orden = [[0, 'asc']];
             var columnas =
                 [
@@ -327,7 +327,7 @@
             var callback =
                 function (data) {
                     var obj = $.parseJSON(data.d);
-                    table = $("#GrillaUsuarios").dataTable();
+                    table = $("#Grilla").dataTable();
                     oSettings = table.fnSettings();
                     table.fnClearTable(this);
                     table.fnDraw();
@@ -347,7 +347,7 @@
                 function (data) {
                     var obj = $.parseJSON(data.d);
                     Mensajeria.CargardoFin();
-                    table = $("#GrillaUsuarios").dataTable();
+                    table = $("#Grilla").dataTable();
                     oSettings = table.fnSettings();
                     table.fnClearTable(this);
                     table.fnDraw();
