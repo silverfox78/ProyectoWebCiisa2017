@@ -4,91 +4,94 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" runat="Server">
+
     <div class="container-fluid">
         <div class="row">
+
+
             <div class="col-sm-8 col-md-9" style="min-height: 1071px;">
                 <div class="row row-cards-pf">
-                    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
-                        <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
-                            <h2 class="card-pf-title" style="height: 32px;">
-                                <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
-                            </h2>
-                            <div class="card-pf-body" style="height: 50px;">
-                                <p class="card-pf-aggregate-status-notifications">
-                                    <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a></span>
-                                </p>
-                            </div>
-                        </div>
 
-                    </div>
                     <div class="col-xs-6 col-sm-4 col-md-2">
                         <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
                             <h2 class="card-pf-title" style="height: 32px;">
-                                <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">20</span> Amet</a>
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Usuarios</a>
                             </h2>
                             <div class="card-pf-body" style="height: 50px;">
                                 <p class="card-pf-aggregate-status-notifications">
-                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span>
-                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:blue;" class="glyphicon glyphicon-king"></span>&nbsp;<span id="spanCantidadUsuariosHombres">0</span></a></span>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:red;" class="glyphicon glyphicon-queen"></span>&nbsp;<span id="spanCantidadUsuariosMujeres">0</span></a></span>
                                 </p>
                             </div>
                         </div>
+                    </div>
 
-                    </div>
                     <div class="col-xs-6 col-sm-4 col-md-2">
                         <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
                             <h2 class="card-pf-title" style="height: 32px;">
-                                <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">9</span> Adipiscing</a>
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Registros</a>
                             </h2>
                             <div class="card-pf-body" style="height: 50px;">
                                 <p class="card-pf-aggregate-status-notifications">
-                                    <span class="card-pf-aggregate-status-notification"><span class="pficon pficon-ok"></span></span>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:orangered;" class="glyphicon glyphicon-pencil"></span>&nbsp;<span id="spanCantidadLogs">0</span></a></span>
                                 </p>
                             </div>
                         </div>
+                    </div>
 
-                    </div>
                     <div class="col-xs-6 col-sm-4 col-md-2">
                         <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
                             <h2 class="card-pf-title" style="height: 32px;">
-                                <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">12</span> Lorem</a>
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Tipos</a>
                             </h2>
                             <div class="card-pf-body" style="height: 50px;">
                                 <p class="card-pf-aggregate-status-notifications">
-                                    <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:green;" class="glyphicon glyphicon-align-justify"></span>&nbsp;<span id="spanCantidadTipos">0</span></a></span>
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xs-6 col-sm-4 col-md-2">
                         <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
                             <h2 class="card-pf-title" style="height: 32px;">
-                                <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">6</span> Dolar Sit</a>
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Sub-Tipos</a>
                             </h2>
                             <div class="card-pf-body" style="height: 50px;">
                                 <p class="card-pf-aggregate-status-notifications">
-                                    <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:greenyellow;" class="glyphicon glyphicon-list"></span>&nbsp;<span id="spanCantidadSubTipos">0</span></a></span>
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xs-6 col-sm-4 col-md-2">
                         <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
                             <h2 class="card-pf-title" style="height: 32px;">
-                                <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">199</span> Consectetur</a>
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Funciones</a>
                             </h2>
                             <div class="card-pf-body" style="height: 50px;">
                                 <p class="card-pf-aggregate-status-notifications">
-                                    <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:coral;" class="glyphicon glyphicon-cog"></span>&nbsp;<span id="spanCantidadFuncionalidades">0</span></a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 104px;">
+                            <h2 class="card-pf-title" style="height: 32px;">
+                                <a href="#"><span class="glyphicon glyphicon-info-sign"></span><span class="card-pf-aggregate-status-count">&nbsp;&nbsp;</span>Niveles</a>
+                            </h2>
+                            <div class="card-pf-body" style="height: 50px;">
+                                <p class="card-pf-aggregate-status-notifications">
+                                    <span class="card-pf-aggregate-status-notification"><a href="#"><span style="font-size: 15px; color:lightskyblue;" class="glyphicon glyphicon-stats"></span>&nbsp;<span id="spanCantidadNiveles">0</span></a></span>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
+                
                 <div class="row row-cards-pf">
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="card-pf" style="height: 360px;">
@@ -318,5 +321,62 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function LlamarServicioGenerico(url, parametros, before, callback, fnerror) {
+            try {
+                $.ajax({
+                    async: true,
+                    cache: false,
+                    type: "POST",
+                    beforeSend: function () {
+                        before();
+                    },
+                    url: url,
+                    data: parametros,
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    timeout: 3600000,
+                    success: function (data) {
+                        callback(data);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        var mensajeError = "Error Ws - [" + url + "] - jqXHR: [" + jqXHR + "] - textStatus: [" + textStatus + "] - errorThrown: [" + errorThrown + "]";
+                        window.console && console.log("Ha ocurrido un error, comuniquese con Sistemas. (1)");
+                        window.console && console.log(mensajeError);
+                    }
+                });
+            } catch (e) {
+                var mensajeError = "Error WS - URL[" + url + "] - Nombre: " + e.name + " - Mensaje: " + e.message;
+                window.console && console.log("Ha ocurrido un error, comuniquese con Sistemas. (2)");
+                window.console && console.log(mensajeError);
+            }
+        };
+
+        function CargaTotales() {
+            var url = "Default.aspx\\InfoTotales";
+            var parametros = "{ }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    $("#spanCantidadUsuariosHombres").html(obj.CantidadUsuariosHombres);
+                    $("#spanCantidadUsuariosMujeres").html(obj.CantidadUsuariosMujeres);
+                    $("#spanCantidadLogs").html(obj.CantidadLogs);
+                    $("#spanCantidadTipos").html(obj.CantidadTipos);
+                    $("#spanCantidadSubTipos").html(obj.CantidadSubTipos);
+                    $("#spanCantidadFuncionalidades").html(obj.CantidadFuncionalidades);
+                    $("#spanCantidadNiveles").html(obj.CantidadNiveles);
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        };
+
+        $(document).ready(function () {
+            CargaTotales();
+        });
+    </script>
 </asp:Content>
 
