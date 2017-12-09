@@ -1,4 +1,3 @@
-D:\Github\ProyectoWebCiisa2017\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
 D:\Github\ProyectoWebCiisa2017\Util\bin\Debug\Util.dll
 D:\Github\ProyectoWebCiisa2017\Util\bin\Debug\Util.pdb
 D:\Github\ProyectoWebCiisa2017\Util\obj\Debug\Util.dll
