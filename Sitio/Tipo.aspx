@@ -11,21 +11,18 @@
                 <input type="text" class="form-control" id="id_tipo" />
             </div>
         </div>
-
         <div class="form-group">
             <label for="codigo_tipo" class="col-sm-2 control-label">Código</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="codigo_tipo" />
             </div>
         </div>
-
         <div class="form-group">
             <label for="nombre_tipo" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="nombre_tipo" />
             </div>
         </div>
-
         <div class="form-group">
             <label for="descripcion_tipo" class="col-sm-2 control-label">Descripción</label>
             <div class="col-sm-10">
@@ -39,7 +36,6 @@
                 <input type="date" class="form-control" />
             </div>
         </div>
-
         <div class="form-group">
             <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
             <div class="col-sm-10">
