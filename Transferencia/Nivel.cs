@@ -5,7 +5,7 @@
 
     [Serializable]
     [XmlRoot("Nivel")]
-    class Nivel
+    public class Nivel
     {
         [XmlElement("Id", Type = typeof(long))]
         public long Id { set; get; }

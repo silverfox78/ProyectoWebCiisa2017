@@ -2,16 +2,16 @@
 {
     using System.Collections.Generic;
 
-    public class Error
+    public class SubTipo
     {
-        private Base.Error Accesobase;
+        private Base.SubTipo Accesobase;
 
-        public Error(string rutaArchivo)
+        public SubTipo(string rutaArchivo)
         {
-            this.Accesobase = new Base.Error(rutaArchivo);
+            this.Accesobase = new Base.SubTipo(rutaArchivo);
         }
 
-        public Transferencia.Error Buscar(long id)
+        public Transferencia.SubTipo Buscar(long id)
         {
             return this.Accesobase.Buscar(id);
         }
@@ -21,12 +21,12 @@
             this.Accesobase.Eliminar(id);
         }
 
-        public void Guarda(Transferencia.Error usuario)
+        public void Guarda(Transferencia.SubTipo usuario)
         {
             this.Accesobase.Guardar(usuario);
         }
 
-        public List<Transferencia.Error> Listar()
+        public List<Transferencia.SubTipo> Listar()
         {
             return this.Accesobase.Listar();
         }
