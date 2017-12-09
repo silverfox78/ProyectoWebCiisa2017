@@ -36,30 +36,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "..\Util\Util.csproj", "{88F5E210-1897-435E-84FA-5BB649588E0D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B76AD996-5C68-4F5B-BF7C-AFB04386FDE6}"
-	ProjectSection(SolutionItems) = preProject
-		Default.aspx = Default.aspx
-		Default.aspx.cs = Default.aspx.cs
-		desktop.ini = desktop.ini
-		Error.aspx = Error.aspx
-		Error.aspx.cs = Error.aspx.cs
-		Funcionalidad.aspx = Funcionalidad.aspx
-		Funcionalidad.aspx.cs = Funcionalidad.aspx.cs
-		MasterPage.master = MasterPage.master
-		MasterPage.master.cs = MasterPage.master.cs
-		Nivel.aspx = Nivel.aspx
-		Nivel.aspx.cs = Nivel.aspx.cs
-		packages.config = packages.config
-		SubTipo.aspx = SubTipo.aspx
-		SubTipo.aspx.cs = SubTipo.aspx.cs
-		Tipo.aspx = Tipo.aspx
-		Tipo.aspx.cs = Tipo.aspx.cs
-		Usuario.aspx = Usuario.aspx
-		Usuario.aspx.cs = Usuario.aspx.cs
-		Web.config = Web.config
-		Web.Debug.config = Web.Debug.config
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
