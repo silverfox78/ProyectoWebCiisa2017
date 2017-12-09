@@ -20,6 +20,7 @@
                             <th>Correo</th>
                             <th>Fecha Nac</th>
                             <th>Sexo</th>
+                            <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -183,6 +184,7 @@
                 "order": orden,
                 "responsive": true,
                 "pageLength": 10,
+                "bDestroy": true,
                 "language": {
                     "sProcessing": "Procesando...",
                     "sLengthMenu": "Mostrar _MENU_ registros",
@@ -246,6 +248,16 @@
                     {
                         "responsive": true, "orderable": true, "mDataProp": "Sexo", "defaultContent": '',
                         render: function (data, type, row) { return row.Sexo; }
+                    },
+                    {
+                        "responsive": true, "orderable": true, "mDataProp": "Opciones", "defaultContent": '',
+                        render: function (data, type, row) {
+                            return "<div class='btn-group' role='group'>" +
+                                "<button type='button' class='btn btn-primary' id='BtnVer_" + row.Id + "' onclick='Ver(" + row.Id + ");'>" +
+                                "<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>" +
+                                "<button type='button' class='btn btn-danger' id='BtnEliminar_" + row.Id + "' onclick='Eliminar(" + row.Id + ");'>" +
+                                "<span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></div>";
+                        }
                     }
                 ];
 
@@ -267,16 +279,93 @@
             LlamarServicioGenerico(url, parametros, before, callback, fnerror);
         }
 
+        function Ver(id) {
+            var url = "Usuario.aspx\\Buscar";
+            var parametros = "{ id: " + id + " }";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    $("#txtId").val(obj.Id);
+                    $("#txtUsername").val(obj.Username);
+                    $("#txtNombre").val(obj.Nombre);
+                    $("#txtApellidos").val(obj.Apellido);
+                    $("#txtCorreo").val(obj.Correo);
+
+                    var now = new Date(obj.FechaNac);
+                    var day = ("0" + now.getDate()).slice(-2);
+                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                    var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                    $("#txtFecNac").val(fecha);
+                    $("#cmbSexo").val(obj.Sexo);
+
+                    $("#Panel_Formulario").show();
+                    $("#Panel_Grilla").hide();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
+        function Guardar() {
+            var url = "Usuario.aspx\\Guardar";
+            var id = $("#txtId").val();
+            if (id <= 0) {
+                id = 0;
+            }
+            var parametros = "{ " +
+                "id: " + id + ", " +
+                "apellido: '" + $("#txtApellidos").val() + "', " +
+                "correo: '" + $("#txtCorreo").val() + "', " +
+                "fechaNac: '" + $("#txtFecNac").val() + "', " +
+                "nombre: '" + $("#txtNombre").val() + "', " +
+                "sexo: '" + $("#cmbSexo").val() + "', " +
+                "username: '" + $("#txtUsername").val() + "' " +
+                "}";
+            var before = function () { window.console && console.log("Se inicia la llamada al WS..."); };
+            var callback =
+                function (data) {
+                    var obj = $.parseJSON(data.d);
+                    table = $("#GrillaUsuarios").dataTable();
+                    oSettings = table.fnSettings();
+                    table.fnClearTable(this);
+                    table.fnDraw();
+                    LlamarServicioGrilla();
+                    window.console && console.log("Termino con exito la llamada al WS...");
+                };
+            var fnerror = function (data) { window.console && console.log("Error en la llamada al WS - " + data); };
+
+            LlamarServicioGenerico(url, parametros, before, callback, fnerror);
+        }
+
         $(document).ready(function () {
             LlamarServicioGrilla();
-            BuscaUsuario();
 
             $("#BtnNuevo").click(function () {
+                $("#txtId").val("0");
+                $("#txtUsername").val("");
+                $("#txtNombre").val("");
+                $("#txtApellidos").val("");
+                $("#txtCorreo").val("");
+                var now = new Date();
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var fecha = now.getFullYear() + "-" + (month) + "-" + (day);
+                $("#txtFecNac").val(fecha);
+                $("#cmbSexo").val("");
+
                 $("#Panel_Formulario").show();
                 $("#Panel_Grilla").hide();
             });
 
             $("#BtnVerGrilla").click(function () {
+                $("#Panel_Formulario").hide();
+                $("#Panel_Grilla").show();
+            });
+
+            $("#BtnGuardar").click(function () {
+                Guardar();
                 $("#Panel_Formulario").hide();
                 $("#Panel_Grilla").show();
             });

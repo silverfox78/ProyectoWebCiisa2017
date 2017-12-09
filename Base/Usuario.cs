@@ -36,6 +36,7 @@
         {
             if (!this.Existe(objeto))
             {
+                objeto.Id = this.DeterminaSiguiente();
                 this.lista.Add(objeto);
             }
             else
@@ -50,6 +51,25 @@
         public List<Transferencia.Usuario> Listar()
         {
             return this.lista;
+        }
+
+        private long DeterminaSiguiente()
+        {
+            long retorno = 0;
+            if (!this.lista.Any())
+            {
+                return 1;
+            }
+
+            foreach(Transferencia.Usuario tmp in this.lista)
+            {
+                if(retorno < tmp.Id)
+                {
+                    retorno = tmp.Id;
+                }
+            }
+
+            return retorno + 1;
         }
 
         protected void ActualizaOrigen()
