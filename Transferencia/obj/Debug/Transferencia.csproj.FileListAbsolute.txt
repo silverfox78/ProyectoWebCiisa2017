@@ -7,3 +7,8 @@ C:\TrabajosEnGithub\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.p
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.dll
 C:\TrabajosEnGithub\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.pdb
+C:\github\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.dll
+C:\github\ProyectoWebCiisa2017\Transferencia\bin\Debug\Transferencia.pdb
+C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
+C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.dll
+C:\github\ProyectoWebCiisa2017\Transferencia\obj\Debug\Transferencia.pdb

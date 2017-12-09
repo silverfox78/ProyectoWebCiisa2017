@@ -32,7 +32,7 @@
                     &nbsp;
                     <div class="btn-group pull-right" role="group">
                         <button type="button" class="btn btn-success" id="BtnNuevo">
-                            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nuevo Nivel &nbsp; &nbsp;
+                            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nueva Funcionalidad &nbsp; &nbsp;
                         </button>
                     </div>
                 </div>
@@ -322,7 +322,7 @@
         }
 
         function Guardar() {
-            var url = "Nivel.aspx\\Guardar";
+            var url = "Funcionalidad.aspx\\Guardar";
             var id = $("#txtId").val();
             if (id <= 0) {
                 id = 0;
