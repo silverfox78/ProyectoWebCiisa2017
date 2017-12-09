@@ -27,14 +27,7 @@
             </div>
             <div class="panel-footer">
                 <div>
-                    <!--
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-warning" id="BtnCargaEjemplo">
-                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Carga Ejemplo &nbsp; &nbsp;
-                    </button>
-                </div>
-                -->
-
+                    &nbsp;
                     <div class="btn-group pull-right" role="group">
                         <button type="button" class="btn btn-success" id="BtnNuevo">
                             <span class="glyphicon glyphicon-check" aria-hidden="true"></span>&nbsp; &nbsp; Nuevo Usuario &nbsp; &nbsp;
@@ -42,22 +35,94 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
     <div id="Panel_Formulario" style="display: none;">
-        <h1>Usuario</h1>
-        <h1>Samuel</h1>
-        <ul>
-            <li>ID</li>
-            <li>USERNAME</li>
-            <li>NOMBRE</li>
-            <li>APELLIDO</li>
-            <li>FECHA_NAC</li>
-            <li>SEXO</li>
-            <li>CORREO</li>
-        </ul>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Listado de usuarios</h3>
+            </div>
+            <div class="panel-body">
+                <br />
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtId" class="col-sm-2 control-label">ID</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="txtId" disabled="disabled" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtUsername" class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="txtUsername" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtNombre" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtApellidos" class="col-sm-2 control-label">Apellidos</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtApellidos" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtCorreo" class="col-sm-2 control-label">Correo</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtCorreo" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtFecNac" class="col-sm-2 control-label">Fecha de Nacimiento</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="txtFecNac" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cmbSexo" class="col-sm-2 control-label">Sexo</label>
+                        <div class="col-sm-4">
+                            <select name="EstadoTipo" id="cmbSexo">
+                                <option value="" selected="selected">Seleccione Sexo</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-success" id="BtnVerGrilla">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp; &nbsp; Ver Listado &nbsp; &nbsp;
+                        </button>
+                    </div>
+                    &nbsp;
+                    <div class="btn-group pull-right" role="group">
+                        <button type="button" class="btn btn-default" id="BtnLimpiar">
+                            <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>&nbsp; &nbsp; Limpiar &nbsp; &nbsp;
+                        </button>
+                        <button type="button" class="btn btn-danger" id="BtnEliminar">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp; &nbsp; Eliminar &nbsp; &nbsp;
+                        </button>
+                        <button type="button" class="btn btn-primary" id="BtnGuardar">
+                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>&nbsp; &nbsp; Guardar &nbsp; &nbsp;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -205,9 +270,15 @@
         $(document).ready(function () {
             LlamarServicioGrilla();
             BuscaUsuario();
+
             $("#BtnNuevo").click(function () {
                 $("#Panel_Formulario").show();
                 $("#Panel_Grilla").hide();
+            });
+
+            $("#BtnVerGrilla").click(function () {
+                $("#Panel_Formulario").hide();
+                $("#Panel_Grilla").show();
             });
         });
     </script>
