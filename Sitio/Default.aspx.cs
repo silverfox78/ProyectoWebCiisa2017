@@ -41,7 +41,7 @@ public partial class _Default : System.Web.UI.Page
             CantidadUsuariosHombres = hombre,
             CantidadUsuariosMujeres = mujeres, 
             CantidadFuncionalidades = new Negocio.Funcionalidad(HttpContext.Current.Server.MapPath("/Archivos/funcionalidades.xml")).Listar().Count,
-            CantidadLogs = 0,
+            CantidadLogs = new Negocio.Log(HttpContext.Current.Server.MapPath("/Archivos/logs.xml")).Listar().Count,
             CantidadNiveles = new Negocio.Nivel(HttpContext.Current.Server.MapPath("/Archivos/niveles.xml")).Listar().Count,
             CantidadSubTipos = new Negocio.SubTipo(HttpContext.Current.Server.MapPath("/Archivos/subtipos.xml")).Listar().Count,
             CantidadTipos = new Negocio.Tipo(HttpContext.Current.Server.MapPath("/Archivos/tipos.xml")).Listar().Count
