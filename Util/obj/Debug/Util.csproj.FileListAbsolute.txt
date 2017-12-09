@@ -2,3 +2,8 @@ D:\Github\ProyectoWebCiisa2017\Util\bin\Debug\Util.dll
 D:\Github\ProyectoWebCiisa2017\Util\bin\Debug\Util.pdb
 D:\Github\ProyectoWebCiisa2017\Util\obj\Debug\Util.dll
 D:\Github\ProyectoWebCiisa2017\Util\obj\Debug\Util.pdb
+C:\TrabajosEnGithub\ProyectoWebCiisa2017\Util\bin\Debug\Util.dll
+C:\TrabajosEnGithub\ProyectoWebCiisa2017\Util\bin\Debug\Util.pdb
+C:\TrabajosEnGithub\ProyectoWebCiisa2017\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\TrabajosEnGithub\ProyectoWebCiisa2017\Util\obj\Debug\Util.dll
+C:\TrabajosEnGithub\ProyectoWebCiisa2017\Util\obj\Debug\Util.pdb
