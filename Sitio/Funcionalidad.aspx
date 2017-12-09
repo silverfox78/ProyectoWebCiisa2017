@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cabecera" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cuerpo" runat="Server">
-
     <div id="Panel_Grilla">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -48,17 +47,16 @@
             </div>
             <div class="panel-body">
                 <br />
-
                 <div class="form-horizontal">
                     <h1 id="right-aligned_all-fields-required">Funcionalidad</h1>
                     <div class="form-group">
-                        <label for="id" class="col-sm-2 control-label">ID</label>
+                        <label for="txtid" class="col-sm-2 control-label">ID</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtid" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="codigo" class="col-sm-2 control-label">Código</label>
+                        <label for="txtCodigo" class="col-sm-2 control-label">Código</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtCodigo" required="required" />
                         </div>
@@ -66,13 +64,13 @@
 
 
                     <div class="form-group">
-                        <label for="nombre" class="col-sm-2 control-label">Nombre</label>
+                        <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtNombre" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="descripcion" class="col-sm-2 control-label">Descripción</label>
+                        <label for="txtDescripcion" class="col-sm-2 control-label">Descripción</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtDescripcion" required="required" />
                         </div>
@@ -80,14 +78,14 @@
 
 
                     <div class="form-group">
-                        <label for="input5" class="col-sm-2 control-label">Fecha de Creación</label>
+                        <label for="txtCreacion" class="col-sm-2 control-label">Fecha de Creación</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="txtCreacion" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
+                        <label for="txtActualizacion" class="col-sm-2 control-label">Fecha de Actualización</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="txtActualizacion" />
                         </div>
@@ -95,7 +93,7 @@
 
 
                     <div class="form-group">
-                        <label for="Estado_funcionalidad" class="col-sm-2 control-label">Estado</label>
+                        <label for="cmbEstado" class="col-sm-2 control-label">Estado</label>
                         <div class="col-sm-10">
                             <select name="EstadoFuncionalidad" id="cmbEstado">
                                 <option value="Ninguno" selected="selected">Seleccione Estado</option>
@@ -355,7 +353,7 @@
         $(document).ready(function () {
             LlamarServicioGrilla();
 
-                $("#BtnNuevo").click(function () {
+            $("#BtnNuevo").click(function () {
                 $("#txtId").val("0");
                 $("#txtCodigo").val("");
                 $("#txtNombre").val("");

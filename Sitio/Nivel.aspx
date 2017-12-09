@@ -50,47 +50,47 @@
                 <div class="form-horizontal">
                     <h1 id="right-aligned_all-fields-required">Nivel</h1>
                     <div class="form-group">
-                        <label for="id_subtipo" class="col-sm-2 control-label">ID</label>
+                        <label for="txtId" class="col-sm-2 control-label">ID</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtId" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="codigo_tipo" class="col-sm-2 control-label">ID Nivel</label>
+                        <label for="txtIdNivel" class="col-sm-2 control-label">ID Nivel</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtIdNivel" required="required" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="codigo_subtipo" class="col-sm-2 control-label">Código</label>
+                        <label for="txtCodigo" class="col-sm-2 control-label">Código</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtCodigo" required="required" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="nombre_subtipo" class="col-sm-2 control-label">Nombre</label>
+                        <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtNombre" required="required" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="descripcion_subtipo" class="col-sm-2 control-label">Descripción</label>
+                        <label for="txtDescripcion" class="col-sm-2 control-label">Descripción</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="txtDescripcion" required="required" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="input5" class="col-sm-2 control-label">Fecha de Creación</label>
+                        <label for="txtCreacion" class="col-sm-2 control-label">Fecha de Creación</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="txtCreacion" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="input6" class="col-sm-2 control-label">Fecha de Actualización</label>
+                        <label for="txtActualizacion" class="col-sm-2 control-label">Fecha de Actualización</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="txtActualizacion" />
                         </div>
